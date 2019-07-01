@@ -11,6 +11,7 @@ int len;
 
 int main()
 {
+	printf("thisis another test");
 	printf("enter the length of the array that you want to be generated: ");
 	int input;
 	scanf("%d", &input);
@@ -20,7 +21,8 @@ int main()
 	printf("malloc complete\n");
 	genArr();
 	printf("array gen complete\n");
-	printArrFunc();
+	printf("thisis a test");
+	//printArrFunc();
 	sort();
 	printArrFunc();
 	return 0;
@@ -35,7 +37,7 @@ int genArr()
 		array[i] = n;
 		printf(", %d", n);
 	}
-	printf("array gen complete \n");
+	return 0;
 }
 
 int sort()
