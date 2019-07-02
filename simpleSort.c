@@ -6,7 +6,7 @@ void genArr();
 void sort();
 void printArrFunc();
 
-int * array;
+int *array;
 int len;
 
 int main()
@@ -17,7 +17,7 @@ int main()
 	scanf("%d", &input);
 	printf("your input was %d\n", input);
 	len = input;
-	array = malloc(100*input);
+	array = (int*)malloc(100*sizeof(input));
 	printf("malloc complete\n");
 	genArr();
 	//printf("array gen complete\n");
