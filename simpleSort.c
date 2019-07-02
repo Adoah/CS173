@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include "testHeader.h"
 
-int genArr();
-int sort();
-int printArrFunc();
+void genArr();
+void sort();
+void printArrFunc();
 
 int * array;
 int len;
@@ -20,15 +20,15 @@ int main()
 	array = malloc(100*input);
 	printf("malloc complete\n");
 	genArr();
-	printf("array gen complete\n");
-	// printf("thisis a test");
+	//printf("array gen complete\n");
+	//printf("thisis a test");
 	printArrFunc();
 	sort();
 	printArrFunc();
 	return 0;
 }
 
-int genArr()
+void genArr()
 {
 	printf("genarr");
 	int i, n;
@@ -40,10 +40,9 @@ int genArr()
 		printf(", %d", n);
 	}
 	printf("iz done");
-	return 0;
 }
 
-int sort()
+void sort()
 {
 	//sorting algorithm goes here
 	int i, n;
@@ -60,7 +59,7 @@ int sort()
 	printf("sorted\n");
 }
 
-int printArrFunc()
+void printArrFunc()
 {
 	printf("print arr func");
 	int i;
@@ -68,4 +67,5 @@ int printArrFunc()
 	{
 		printf("%d, ", array[i]);
 	}
+	printf("bottom of func");
 }
