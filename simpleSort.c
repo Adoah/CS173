@@ -1,71 +1,80 @@
+// Example program
 #include <stdio.h>
 #include <stdlib.h>
-#include "testHeader.h"
 
-void genArr();
-void sort();
-void printArrFunc();
+int genArr();
+int sortboiii();
+int printArrFunc();
 
-int *array;
 int len;
+int *array;
 
 int main()
 {
-	// printf("thisis another test");
-	printf("enter the length of the array that you want to be generated: ");
-	int input;
-	scanf("%d", &input);
-	printf("your input was %d\n", input);
-	len = input;
-	array = (int*)malloc(100*sizeof(input));
-	printf("malloc complete\n");
-	genArr();
-	//printf("array gen complete\n");
-	//printf("thisis a test");
-	printArrFunc();
-	sort();
+	printf("enter the length of the array you want ");
+    	int input;
+  	scanf("%d", &input);
+    	printf("your input was %d\n", input);
+    	len = input;
+    	array = (int *) malloc(100*sizeof(input));
+    	//int *a = (int*)malloc(num * sizeof(int));
+    	printf("malloc done\n");
+    	genArr();
+    	printf("genarr done\n");
+    	printArrFunc();
+    	printf("arrfunc done\n");
+    	sortboiii();
+    	printf("donzo\n");
 	printArrFunc();
 	return 0;
 }
 
-void genArr()
+int genArr()
 {
-	printf("genarr");
 	int i, n;
-	printf("len is: %d ", len);
+	printf("lenght is: %d\n", len);
 	for (i = 0; i < len; i++)
 	{
 		n = rand() % 100 + 1;
 		array[i] = n;
 		printf(", %d", n);
 	}
-	printf("iz done");
+	printf("\n");
+	return 0;
 }
 
-void sort()
+int sortboiii()
 {
-	//sorting algorithm goes here
-	int i, n;
-	for (i = 0; i < len - 1; i++)
-	{
-		for (n = 0; n < len - i - 1; n++)
+	int i, j,temp;
+        for(i = 0; i <= len; i++)
+        {
+		for(j=0; j <= len; j++)
 		{
-			if(array[n] > array[n + 1])
+			if(array[j]>array[j+1])
 			{
-				swap(&n, &n + 1);
+				temp=array[j];
+				array[j]=array[j+1];
+				array[j+1]=temp;
 			}
 		}
-	}
-	printf("sorted\n");
+        }
+//	printf("here's yo fochin' nombars boiiiiii: ");
+//	for (i = 2; i < len+2; i++)
+//	{
+//		printf("%d, ", array[i]);
+//	}
+//	printf("\n");
+//	return 0;
 }
 
-void printArrFunc()
+int printArrFunc()
 {
-	printf("print arr func");
+	printf("printarr func \n");
 	int i;
 	for (i = 0; i < len; i++)
 	{
 		printf("%d, ", array[i]);
 	}
-	printf("bottom of func");
+	printf("\n");
+	return 0;
 }
